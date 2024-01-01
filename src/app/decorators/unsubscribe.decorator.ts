@@ -12,6 +12,6 @@ export function Unsubscribe(target: any, _: string, description: PropertyDescrip
 	const onDestroy = prototype.ngOnDestroy ?? (() => {});
 	prototype.ngOnDestroy = function () {
 		onDestroy.call(this);
-		subscription?.unsubscribe();
+		subscription?.unsubscribe?.();
 	};
 }
