@@ -5,7 +5,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { finalize, Subject, Subscription, tap } from 'rxjs';
 import { CoursesService } from '../../services/courses.service';
-import { Course } from '../interfaces/course';
+import { Course } from '../../interfaces/course';
 import { Unsubscribe } from '../../decorators/unsubscribe.decorator';
 
 @Component({
