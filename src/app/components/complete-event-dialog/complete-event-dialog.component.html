@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Dialog Title</h2>
+<mat-dialog-content class="mat-typography">
+	<p>Dialog Content</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+	<button mat-button mat-dialog-close>Cancel</button>
+	<button mat-button (click)="event.emit('Emit event from dialog')">Emit Event</button>
+</mat-dialog-actions>
