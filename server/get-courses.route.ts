@@ -3,7 +3,7 @@ import { COURSES } from './db-data';
 
 export function getAllCourses(req: Request, res: Response) {
 	console.log('Retrieving courses data ...');
-	setTimeout(() => res.status(200).json({ payload: Object.values(COURSES) }), 3000);
+	setTimeout(() => res.status(200).json({ payload: Object.values(COURSES) }), 5000);
 }
 
 export function getCourseByUrl(req: Request, res: Response) {
