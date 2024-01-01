@@ -1,10 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
 
+$theme: mat.define-dark-theme(
+	(
+		color: (
+			primary: mat.define-palette(mat.$grey-palette),
+			accent: mat.define-palette(mat.$blue-grey-palette),
+		),
+	)
+);
+
+@include mat.all-component-themes($theme);
+
+/* Reset Styles */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6,
+p {
+	margin: 0;
+}
+
+/* Global Styles */
 html,
 body {
 	height: 100%;
 }
+
 body {
 	margin: 0;
 	font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.layout {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+}
+
+.layout-content {
+	flex: 1;
+}
+
+.layout-page {
+	padding: 30px;
+}
+
+.flex-spacer {
+	flex: 1 1 auto;
 }
