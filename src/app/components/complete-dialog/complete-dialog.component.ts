@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { CompleteEvent } from '../../decorators/complete-event.decorator';
+import { Complete } from '../../decorators/complete.decorator';
 
 @Component({
 	selector: 'app-complete-event-dialog',
 	standalone: true,
 	imports: [MatDialogModule, MatButtonModule],
-	templateUrl: './complete-event-dialog.component.html',
-	styleUrl: './complete-event-dialog.component.scss',
+	templateUrl: './complete-dialog.component.html',
+	styleUrl: './complete-dialog.component.scss',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CompleteEventDialogComponent {
-	@CompleteEvent @Output() event = new EventEmitter();
+export class CompleteDialogComponent {
+	@Complete @Output() event = new EventEmitter();
 }

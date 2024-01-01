@@ -2,9 +2,8 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
 	{
-		path: 'complete-event',
-		loadComponent: () =>
-			import('./components/complete-event/complete-event.component').then((cmp) => cmp.CompleteEventComponent),
+		path: 'complete',
+		loadComponent: () => import('./components/complete/complete.component').then((cmp) => cmp.CompleteComponent),
 	},
 	{
 		path: 'unsubscribe',
