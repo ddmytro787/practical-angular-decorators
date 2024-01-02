@@ -84,3 +84,7 @@ body {
 		min-height: 150px;
 	}
 }
+
+button[mat-menu-item] {
+	min-width: 100px;
+}

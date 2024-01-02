@@ -7,7 +7,13 @@ import { Course } from '../interfaces/course';
 export class CoursesService {
 	constructor(private http: HttpClient) {}
 
-	getCourses(): Observable<Course[]> {
-		return this.http.get<{ payload: Course[] }>(`/api/courses`).pipe(map((res) => res.payload));
+	getCourses(timeout: number = 1000): Observable<Course[]> {
+		return this.http
+			.get<{ payload: Course[] }>(`/api/courses`, {
+				params: {
+					timeout,
+				},
+			})
+			.pipe(map((res) => res.payload));
 	}
 }
