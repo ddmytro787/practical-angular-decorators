@@ -1,7 +1,7 @@
 import { FormGroup } from '@angular/forms';
 
 export function ValidateForm<T>(propertyName: string, cb?: Function) {
-	return (target: any, _1: string, descriptor: PropertyDescriptor) => {
+	return (_: any, _1: string, descriptor: PropertyDescriptor) => {
 		const method = descriptor.value;
 		descriptor.value = function (...args: any[]) {
 			const form = (this as { [key: string]: FormGroup })[propertyName];

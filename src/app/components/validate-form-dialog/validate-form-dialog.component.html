@@ -6,12 +6,18 @@
 			<input matInput formControlName="input" />
 		</mat-form-field>
 		<mat-error *ngIf="inputControl.touched && inputControl.hasError('required')">This field is required</mat-error>
+		<mat-error *ngIf="inputControl.touched && inputControl.hasError('maxlength')"
+			>Max length is more that it is allowed</mat-error
+		>
 		<mat-form-field>
 			<mat-label>Input2</mat-label>
 			<input matInput formControlName="input2" />
 		</mat-form-field>
 		<mat-error *ngIf="inputControl2.touched && inputControl2.hasError('required')"
 			>This field is required</mat-error
+		>
+		<mat-error *ngIf="inputControl2.touched && inputControl2.hasError('maxlength')"
+			>Max length is more that it is allowed</mat-error
 		>
 		<mat-form-field>
 			<mat-label>Enter a date range</mat-label>
